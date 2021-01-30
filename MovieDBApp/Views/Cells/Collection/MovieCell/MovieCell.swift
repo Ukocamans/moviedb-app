@@ -13,6 +13,10 @@ class MovieCell: UICollectionViewCell {
 
     @IBOutlet weak var viewMovie: MovieView!
     
+    override func prepareForReuse() {
+        viewMovie.prepareForReuse()
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         

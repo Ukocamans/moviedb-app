@@ -43,7 +43,8 @@ class MovieListViewModel {
         let request = PopularMoviesRequest()
         let requestModel = PopularMoviesRequestModel()
         requestModel.language = "en-US"
-        requestModel.page = "\(page+1)"
+        page += 1
+        requestModel.page = "\(page)"
         requestModel.apiKey = "fd2b04342048fa2d5f728561866ad52a"
         request.send(reqModel: requestModel) { [weak self] (result) in
             switch result {
