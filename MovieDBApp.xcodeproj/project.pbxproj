@@ -72,21 +72,29 @@
 		F68037A425C51C3C00E32EBB /* MovieDBApp */ = {
 			isa = PBXGroup;
 			children = (
+				F68037A525C51C3C00E32EBB /* AppDelegate.swift */,
 				F6E0525425C58B4B008F0195 /* Scenes */,
 				F6E0524925C587EC008F0195 /* Views */,
 				F69798E525C5356200953AEF /* Resources */,
-				F68037A525C51C3C00E32EBB /* AppDelegate.swift */,
-				F68037AB25C51C3C00E32EBB /* Main.storyboard */,
-				F68037AE25C51C4000E32EBB /* Assets.xcassets */,
-				F68037B025C51C4000E32EBB /* LaunchScreen.storyboard */,
-				F68037B325C51C4000E32EBB /* Info.plist */,
+				F695636D25C5A5B800EE93F2 /* Storyboards */,
 			);
 			path = MovieDBApp;
+			sourceTree = "<group>";
+		};
+		F695636D25C5A5B800EE93F2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F68037B025C51C4000E32EBB /* LaunchScreen.storyboard */,
+				F68037AB25C51C3C00E32EBB /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		F69798E525C5356200953AEF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F68037B325C51C4000E32EBB /* Info.plist */,
+				F68037AE25C51C4000E32EBB /* Assets.xcassets */,
 				F69798E725C535D500953AEF /* Resources.bundle */,
 			);
 			path = Resources;
@@ -412,7 +420,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MovieDBApp/Info.plist;
+				INFOPLIST_FILE = MovieDBApp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -430,7 +438,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MovieDBApp/Info.plist;
+				INFOPLIST_FILE = MovieDBApp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
