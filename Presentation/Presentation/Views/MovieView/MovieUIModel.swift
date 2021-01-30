@@ -12,6 +12,7 @@ import Data
 
 public class MovieUIModel {
     
+    var width: Int = 185
     public var image: String?
     public var title: String?
     public var rating: String?

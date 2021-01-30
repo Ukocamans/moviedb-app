@@ -10,6 +10,9 @@ import UIKit
 class MovieDetailViewController: UIViewController {
 
     var id: Int?
+    @IBOutlet weak var labelTitle: UILabel!
+    @IBOutlet weak var labelDescription: UILabel!
+    @IBOutlet weak var labelVoteCount: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

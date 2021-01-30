@@ -22,7 +22,7 @@ public class MovieView: BaseView {
     }
     
     public func setup(with UIModel: MovieUIModel) {
-        dataTask = imageViewBg.loadMovieImage(path: UIModel.image, width: 200)
+        dataTask = imageViewBg.loadMovieImage(path: UIModel.image, width: UIModel.width)
         dataTask?.resume()
         labelTitle.text = UIModel.title
         labelRating.text = UIModel.rating
