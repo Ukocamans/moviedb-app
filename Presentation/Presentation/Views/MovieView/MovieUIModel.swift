@@ -10,11 +10,11 @@ import UIKit
 
 import Data
 
-class MovieUIModel {
+public class MovieUIModel {
     
-    var image: UIImage?
-    var title: String?
-    var rating: String?
+    public var image: UIImage?
+    public var title: String?
+    public var rating: String?
     
     public init(model: MovieModel) {
         title = model.originalTitle

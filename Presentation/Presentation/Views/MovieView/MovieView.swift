@@ -7,13 +7,13 @@
 
 import UIKit
 
-class MovieView: BaseView {
+public class MovieView: BaseView {
     
     @IBOutlet weak var imageViewBg: UIImageView!
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelRating: UILabel!
     
-    func setup(with UIModel: MovieUIModel) {
+    public func setup(with UIModel: MovieUIModel) {
         imageViewBg.image = UIModel.image
         labelTitle.text = UIModel.title
         labelRating.text = UIModel.rating
