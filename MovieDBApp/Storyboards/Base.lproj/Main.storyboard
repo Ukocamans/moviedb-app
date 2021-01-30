@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fsJ-aT-eWG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,6 +8,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="M8f-1g-Gps">
+            <objects>
+                <navigationController id="fsJ-aT-eWG" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zfa-gV-k6e">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Q9Q-YQ-emv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vQG-uO-g6T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-958" y="104"/>
+        </scene>
         <!--Movie List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -41,13 +57,31 @@
                             <constraint firstItem="Txc-lT-52H" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vfm-1e-MZC"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="2Pi-Gs-Ewc"/>
                     <connections>
                         <outlet property="collectionView" destination="Txc-lT-52H" id="jkL-fu-13d"/>
+                        <segue destination="gkl-0q-G72" kind="show" identifier="toDetail" id="DJD-PT-R5E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-197" y="124"/>
+            <point key="canvasLocation" x="106" y="104"/>
+        </scene>
+        <!--Movie Detail View Controller-->
+        <scene sceneID="whb-VM-bDG">
+            <objects>
+                <viewController id="gkl-0q-G72" customClass="MovieDetailViewController" customModule="MovieDBApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YiN-W4-36J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Ak2-tf-fMh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8wF-AB-i7r"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RsR-8G-j1M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1058" y="104"/>
         </scene>
     </scenes>
     <resources>

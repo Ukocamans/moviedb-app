@@ -26,6 +26,22 @@ class MovieListViewController: UIViewController {
     func setupCollectionView() {
         collectionView.register(MovieCell.self)
     }
+    
+    
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetail" {
+            
+            guard let controller = segue.destination as? MovieDetailViewController,
+                  let id = sender as? Int else { return }
+            
+            controller.id = id
+            
+        }
+    }
+    
 
 }
 
@@ -42,7 +58,9 @@ extension MovieListViewController: UICollectionViewDataSource {
 }
 
 extension MovieListViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toDetail", sender: viewModel.dataSource[indexPath.row].id)
+    }
 }
 
 extension MovieListViewController: UICollectionViewDelegateFlowLayout {
