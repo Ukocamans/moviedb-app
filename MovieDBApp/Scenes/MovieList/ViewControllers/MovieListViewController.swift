@@ -10,11 +10,17 @@ import UIKit
 class MovieListViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    var viewModel = MovieListViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        viewModel = MovieListViewModel(reloadTable: { [weak self] in
+            self?.collectionView.reloadData()
+        })
         setupCollectionView()
+        
+        viewModel.getPopularMovies()
     }
 
     func setupCollectionView() {
@@ -25,16 +31,14 @@ class MovieListViewController: UIViewController {
 
 extension MovieListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return viewModel.numberOfItems
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: MovieCell = collectionView.dequeueReusableCell(for: indexPath)
-        //cell.setup(with: MovieUIModel)
+        cell.setup(with: viewModel.dataSource[indexPath.row])
         return cell
     }
-    
-    
 }
 
 extension MovieListViewController: UICollectionViewDelegate {
@@ -43,7 +47,7 @@ extension MovieListViewController: UICollectionViewDelegate {
 
 extension MovieListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 160, height: 160)
+        return viewModel.itemSize
     }
 }
 

@@ -8,8 +8,8 @@
 import Foundation
 import Core
 
-class PopularMoviesRequest:NetworkRequest<PopularMoviesRequestModel,PopularMoviesResponseModel> {
-    override init() {
+public class PopularMoviesRequest:NetworkRequest<PopularMoviesRequestModel,PopularMoviesResponseModel> {
+    public override init() {
         super.init()
         self.endpoint = "/3/movie/popular"
         self.httpMethod = .get

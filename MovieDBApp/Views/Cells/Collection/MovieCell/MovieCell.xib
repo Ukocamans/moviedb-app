@@ -25,10 +25,10 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="sGX-Y2-k1r" secondAttribute="trailing" id="LBR-JE-WMF"/>
-                <constraint firstItem="sGX-Y2-k1r" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="N8j-tt-hx4"/>
-                <constraint firstAttribute="bottom" secondItem="sGX-Y2-k1r" secondAttribute="bottom" id="ad5-wC-VkP"/>
-                <constraint firstItem="sGX-Y2-k1r" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="exg-kF-vlE"/>
+                <constraint firstItem="sGX-Y2-k1r" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ApJ-FT-yi5"/>
+                <constraint firstItem="sGX-Y2-k1r" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="LZH-En-f9c"/>
+                <constraint firstAttribute="trailing" secondItem="sGX-Y2-k1r" secondAttribute="trailing" id="N5N-nv-KLg"/>
+                <constraint firstAttribute="bottom" secondItem="sGX-Y2-k1r" secondAttribute="bottom" id="XdI-lD-i94"/>
             </constraints>
             <size key="customSize" width="184" height="204"/>
             <connections>

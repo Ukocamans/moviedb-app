@@ -7,12 +7,15 @@
 
 import Foundation
 
-class PopularMoviesRequestModel: Codable {
-    var language: String?
-    var apiKey: String?
-    var page: String?
+public class PopularMoviesRequestModel: Codable {
     
-    enum CodingKeys: String, CodingKey {
+    public init() { }
+    
+    public var language: String?
+    public var apiKey: String?
+    public var page: String?
+    
+    public enum CodingKeys: String, CodingKey {
         case language
         case apiKey = "api_key"
         case page
