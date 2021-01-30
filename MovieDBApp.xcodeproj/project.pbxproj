@@ -10,7 +10,6 @@
 		F621C44825C5264D00843346 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F621C44725C5264D00843346 /* Presentation.framework */; };
 		F621C46825C526C400843346 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F621C46725C526C400843346 /* Data.framework */; };
 		F68037A625C51C3C00E32EBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68037A525C51C3C00E32EBB /* AppDelegate.swift */; };
-		F68037A825C51C3C00E32EBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68037A725C51C3C00E32EBB /* SceneDelegate.swift */; };
 		F68037AA25C51C3C00E32EBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68037A925C51C3C00E32EBB /* ViewController.swift */; };
 		F68037AD25C51C3C00E32EBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68037AB25C51C3C00E32EBB /* Main.storyboard */; };
 		F68037AF25C51C4000E32EBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F68037AE25C51C4000E32EBB /* Assets.xcassets */; };
@@ -23,7 +22,6 @@
 		F621C46725C526C400843346 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68037A225C51C3C00E32EBB /* MovieDBApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieDBApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68037A525C51C3C00E32EBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F68037A725C51C3C00E32EBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F68037A925C51C3C00E32EBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F68037AC25C51C3C00E32EBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F68037AE25C51C4000E32EBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,7 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				F68037A525C51C3C00E32EBB /* AppDelegate.swift */,
-				F68037A725C51C3C00E32EBB /* SceneDelegate.swift */,
 				F68037A925C51C3C00E32EBB /* ViewController.swift */,
 				F68037AB25C51C3C00E32EBB /* Main.storyboard */,
 				F68037AE25C51C4000E32EBB /* Assets.xcassets */,
@@ -159,7 +156,6 @@
 			files = (
 				F68037AA25C51C3C00E32EBB /* ViewController.swift in Sources */,
 				F68037A625C51C3C00E32EBB /* AppDelegate.swift in Sources */,
-				F68037A825C51C3C00E32EBB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
