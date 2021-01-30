@@ -14,6 +14,7 @@
 		F68037AD25C51C3C00E32EBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68037AB25C51C3C00E32EBB /* Main.storyboard */; };
 		F68037AF25C51C4000E32EBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F68037AE25C51C4000E32EBB /* Assets.xcassets */; };
 		F68037B225C51C4000E32EBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68037B025C51C4000E32EBB /* LaunchScreen.storyboard */; };
+		F69798E825C535D500953AEF /* Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F69798E725C535D500953AEF /* Resources.bundle */; };
 		F6AFB5BA25C5249E00D28AA6 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6AFB5B925C5249E00D28AA6 /* Core.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		F68037AE25C51C4000E32EBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F68037B125C51C4000E32EBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F68037B325C51C4000E32EBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F69798E725C535D500953AEF /* Resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resources.bundle; sourceTree = "<group>"; };
 		F6AFB5B925C5249E00D28AA6 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -64,6 +66,7 @@
 		F68037A425C51C3C00E32EBB /* MovieDBApp */ = {
 			isa = PBXGroup;
 			children = (
+				F69798E525C5356200953AEF /* Resources */,
 				F68037A525C51C3C00E32EBB /* AppDelegate.swift */,
 				F68037A925C51C3C00E32EBB /* ViewController.swift */,
 				F68037AB25C51C3C00E32EBB /* Main.storyboard */,
@@ -72,6 +75,14 @@
 				F68037B325C51C4000E32EBB /* Info.plist */,
 			);
 			path = MovieDBApp;
+			sourceTree = "<group>";
+		};
+		F69798E525C5356200953AEF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F69798E725C535D500953AEF /* Resources.bundle */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		F6AFB5B825C5249E00D28AA6 /* Frameworks */ = {
@@ -93,6 +104,7 @@
 			buildPhases = (
 				F680379E25C51C3C00E32EBB /* Sources */,
 				F680379F25C51C3C00E32EBB /* Frameworks */,
+				F69798E425C5351900953AEF /* ShellScript */,
 				F68037A025C51C3C00E32EBB /* Resources */,
 			);
 			buildRules = (
@@ -144,10 +156,31 @@
 				F68037B225C51C4000E32EBB /* LaunchScreen.storyboard in Resources */,
 				F68037AF25C51C4000E32EBB /* Assets.xcassets in Resources */,
 				F68037AD25C51C3C00E32EBB /* Main.storyboard in Resources */,
+				F69798E825C535D500953AEF /* Resources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F69798E425C5351900953AEF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n\necho \"resource bundle copied\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F680379E25C51C3C00E32EBB /* Sources */ = {
