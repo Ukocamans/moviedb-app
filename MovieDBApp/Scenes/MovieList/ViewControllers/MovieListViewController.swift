@@ -51,3 +51,16 @@ extension MovieListViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
+extension MovieListViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let scrollViewHeight = scrollView.frame.size.height
+        let scrollContentSizeHeight = scrollView.contentSize.height
+        let scrollOffset = scrollView.contentOffset.y
+        if !viewModel.isBusy , scrollContentSizeHeight > 0 {
+            if scrollOffset + scrollViewHeight >= scrollContentSizeHeight {
+                viewModel.getPopularMovies()
+            }
+        }
+    }
+}
+
