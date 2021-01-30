@@ -14,6 +14,8 @@
 		F65A4FA125C5825F0072FEE3 /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65A4FA025C5825F0072FEE3 /* MovieView.swift */; };
 		F65A4FAC25C5827F0072FEE3 /* MovieView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F65A4FA625C582790072FEE3 /* MovieView.xib */; };
 		F65A4FB025C584F00072FEE3 /* MovieUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65A4FAF25C584F00072FEE3 /* MovieUIModel.swift */; };
+		F6E0524225C586A2008F0195 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E0524125C586A2008F0195 /* UICollectionViewExtension.swift */; };
+		F6E0524625C586C7008F0195 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E0524525C586C7008F0195 /* ReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		F65A4FA025C5825F0072FEE3 /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieView.swift; sourceTree = "<group>"; };
 		F65A4FA625C582790072FEE3 /* MovieView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieView.xib; sourceTree = "<group>"; };
 		F65A4FAF25C584F00072FEE3 /* MovieUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieUIModel.swift; sourceTree = "<group>"; };
+		F6E0524125C586A2008F0195 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
+		F6E0524525C586C7008F0195 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				F621C4A025C52DFC00843346 /* UIViewExtension.swift */,
+				F6E0524125C586A2008F0195 /* UICollectionViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				F621C4A625C52E3500843346 /* BaseView.swift */,
+				F6E0524525C586C7008F0195 /* ReusableView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -252,7 +258,9 @@
 				F65A4FB025C584F00072FEE3 /* MovieUIModel.swift in Sources */,
 				F621C4A125C52DFC00843346 /* UIViewExtension.swift in Sources */,
 				F65A4FA125C5825F0072FEE3 /* MovieView.swift in Sources */,
+				F6E0524625C586C7008F0195 /* ReusableView.swift in Sources */,
 				F621C4A725C52E3500843346 /* BaseView.swift in Sources */,
+				F6E0524225C586A2008F0195 /* UICollectionViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
