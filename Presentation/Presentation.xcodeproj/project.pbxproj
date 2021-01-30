@@ -11,11 +11,23 @@
 		F621C44B25C5265400843346 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F621C44A25C5265400843346 /* Core.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F621C49D25C52D1900843346 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F621C43225C5263800843346 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F621C49425C52CF700843346;
+			remoteInfo = Resources;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		F621C43B25C5263800843346 /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F621C43E25C5263800843346 /* Presentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Presentation.h; sourceTree = "<group>"; };
 		F621C43F25C5263800843346 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F621C44A25C5265400843346 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F621C49525C52CF700843346 /* Resources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Resources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		F621C49725C52CF700843346 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +39,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F621C49225C52CF700843346 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -34,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				F621C43D25C5263800843346 /* Presentation */,
+				F621C49625C52CF700843346 /* Resources */,
 				F621C43C25C5263800843346 /* Products */,
 				F621C44925C5265300843346 /* Frameworks */,
 			);
@@ -43,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				F621C43B25C5263800843346 /* Presentation.framework */,
+				F621C49525C52CF700843346 /* Resources.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,6 +83,14 @@
 				F621C44A25C5265400843346 /* Core.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F621C49625C52CF700843346 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F621C49725C52CF700843346 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,11 +119,29 @@
 			buildRules = (
 			);
 			dependencies = (
+				F621C49E25C52D1900843346 /* PBXTargetDependency */,
 			);
 			name = Presentation;
 			productName = Presentation;
 			productReference = F621C43B25C5263800843346 /* Presentation.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		F621C49425C52CF700843346 /* Resources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F621C49825C52CF700843346 /* Build configuration list for PBXNativeTarget "Resources" */;
+			buildPhases = (
+				F621C49125C52CF700843346 /* Sources */,
+				F621C49225C52CF700843346 /* Frameworks */,
+				F621C49325C52CF700843346 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Resources;
+			productName = Resources;
+			productReference = F621C49525C52CF700843346 /* Resources.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -105,6 +152,10 @@
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
 					F621C43A25C5263800843346 = {
+						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
+					};
+					F621C49425C52CF700843346 = {
 						CreatedOnToolsVersion = 12.3;
 					};
 				};
@@ -123,12 +174,20 @@
 			projectRoot = "";
 			targets = (
 				F621C43A25C5263800843346 /* Presentation */,
+				F621C49425C52CF700843346 /* Resources */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F621C43925C5263800843346 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F621C49325C52CF700843346 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -145,7 +204,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F621C49125C52CF700843346 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F621C49E25C52D1900843346 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F621C49425C52CF700843346 /* Resources */;
+			targetProxy = F621C49D25C52D1900843346 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F621C44125C5263800843346 /* Debug */ = {
@@ -273,6 +347,7 @@
 		F621C44425C5263800843346 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -288,6 +363,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tr.com.ukocaman.Presentation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -296,6 +372,7 @@
 		F621C44525C5263800843346 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -316,6 +393,38 @@
 			};
 			name = Release;
 		};
+		F621C49925C52CF700843346 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = tr.com.ukocaman.Resources;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		F621C49A25C52CF700843346 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = tr.com.ukocaman.Resources;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -333,6 +442,15 @@
 			buildConfigurations = (
 				F621C44425C5263800843346 /* Debug */,
 				F621C44525C5263800843346 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F621C49825C52CF700843346 /* Build configuration list for PBXNativeTarget "Resources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F621C49925C52CF700843346 /* Debug */,
+				F621C49A25C52CF700843346 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
