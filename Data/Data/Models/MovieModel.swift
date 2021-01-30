@@ -7,20 +7,20 @@
 
 import Foundation
 
-struct MovieModel: Codable {
-    let adult: Bool?
-    let backdropPath: String?
-    let genreIDS: [Int]?
-    let id: Int?
-    let originalLanguage: String?
-    let originalTitle, overview: String?
-    let popularity: Double?
-    let posterPath, releaseDate, title: String?
-    let video: Bool?
-    let voteAverage: Double?
-    let voteCount: Int?
+public struct MovieModel: Codable {
+    public let adult: Bool?
+    public let backdropPath: String?
+    public let genreIDS: [Int]?
+    public let id: Int?
+    public let originalLanguage: String?
+    public let originalTitle, overview: String?
+    public let popularity: Double?
+    public let posterPath, releaseDate, title: String?
+    public let video: Bool?
+    public let voteAverage: Double?
+    public let voteCount: Int?
 
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case adult
         case backdropPath = "backdrop_path"
         case genreIDS = "genre_ids"
