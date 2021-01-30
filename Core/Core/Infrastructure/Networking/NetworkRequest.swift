@@ -20,7 +20,11 @@ public enum NetworkResult<T> {
     case empty
 }
 
-public class NetworkRequest<RM: Codable, M: Codable>: Request {
+open class NetworkRequest<RM: Codable, M: Codable>: Request {
+    
+    public init() {
+        
+    }
     
     var urlSession = URLSession.shared
     
