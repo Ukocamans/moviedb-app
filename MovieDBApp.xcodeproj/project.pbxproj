@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F621C44825C5264D00843346 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F621C44725C5264D00843346 /* Presentation.framework */; };
+		F621C46825C526C400843346 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F621C46725C526C400843346 /* Data.framework */; };
 		F68037A625C51C3C00E32EBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68037A525C51C3C00E32EBB /* AppDelegate.swift */; };
 		F68037A825C51C3C00E32EBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68037A725C51C3C00E32EBB /* SceneDelegate.swift */; };
 		F68037AA25C51C3C00E32EBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68037A925C51C3C00E32EBB /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		F621C44725C5264D00843346 /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F621C46725C526C400843346 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68037A225C51C3C00E32EBB /* MovieDBApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieDBApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68037A525C51C3C00E32EBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F68037A725C51C3C00E32EBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F621C46825C526C400843346 /* Data.framework in Frameworks */,
 				F621C44825C5264D00843346 /* Presentation.framework in Frameworks */,
 				F6AFB5BA25C5249E00D28AA6 /* Core.framework in Frameworks */,
 			);
@@ -77,6 +80,7 @@
 		F6AFB5B825C5249E00D28AA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F621C46725C526C400843346 /* Data.framework */,
 				F621C44725C5264D00843346 /* Presentation.framework */,
 				F6AFB5B925C5249E00D28AA6 /* Core.framework */,
 			);
