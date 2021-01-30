@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F621C47825C5288100843346 /* URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F621C47725C5288100843346 /* URLRequestBuilder.swift */; };
+		F621C47B25C528B100843346 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F621C47A25C528B100843346 /* HTTPMethod.swift */; };
+		F621C47F25C528D600843346 /* CodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F621C47E25C528D600843346 /* CodableExtension.swift */; };
 		F6AFB5AE25C5244800D28AA6 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = F6AFB5AC25C5244800D28AA6 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F621C47725C5288100843346 /* URLRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestBuilder.swift; sourceTree = "<group>"; };
+		F621C47A25C528B100843346 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		F621C47E25C528D600843346 /* CodableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableExtension.swift; sourceTree = "<group>"; };
 		F6AFB5A925C5244800D28AA6 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6AFB5AC25C5244800D28AA6 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		F6AFB5AD25C5244800D28AA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -27,6 +33,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F621C47225C5283800843346 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				F621C47325C5284100843346 /* Networking */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		F621C47325C5284100843346 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F621C47725C5288100843346 /* URLRequestBuilder.swift */,
+				F621C47A25C528B100843346 /* HTTPMethod.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		F621C47D25C528C300843346 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F621C47E25C528D600843346 /* CodableExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		F6AFB59F25C5244800D28AA6 = {
 			isa = PBXGroup;
 			children = (
@@ -46,6 +77,8 @@
 		F6AFB5AB25C5244800D28AA6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				F621C47D25C528C300843346 /* Extensions */,
+				F621C47225C5283800843346 /* Infrastructure */,
 				F6AFB5AC25C5244800D28AA6 /* Core.h */,
 				F6AFB5AD25C5244800D28AA6 /* Info.plist */,
 			);
@@ -131,6 +164,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F621C47F25C528D600843346 /* CodableExtension.swift in Sources */,
+				F621C47825C5288100843346 /* URLRequestBuilder.swift in Sources */,
+				F621C47B25C528B100843346 /* HTTPMethod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
