@@ -58,11 +58,15 @@ class MovieListViewModel {
     }
     
     func getPopularMovies() {
+        isBusy = true
+        LoadingManager.shared.show()
         let request = PopularMoviesRequest()
         let requestModel = PopularMoviesRequestModel()
         page += 1
         requestModel.page = "\(page)"
         request.send(reqModel: requestModel) { [weak self] (result) in
+            self?.isBusy = false
+            LoadingManager.shared.dismiss()
             switch result {
             case .success(let model):
                 self?.allDataSource += self?.createDataSource(movies: model.results ?? []) ?? []

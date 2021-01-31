@@ -30,8 +30,14 @@ class MovieDetailViewController: UIViewController {
             self?.configurePage()
         })
         
-        viewModel.getMovieDetail()
+        
         configureNavigation()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        viewModel.getMovieDetail()
     }
     
     func configureNavigation() {

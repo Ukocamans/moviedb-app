@@ -49,7 +49,10 @@ class MovieDetailViewModel {
         let request = MovieDetailRequest(id: id)
         let requestModel = BaseRequestModel()
         
+        LoadingManager.shared.show()
+        
         request.send(reqModel: requestModel) { [weak self] (result) in
+            LoadingManager.shared.dismiss()
             switch result {
             case .success(let model):
                 self?.configurePage(with: model)

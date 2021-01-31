@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		F621C44825C5264D00843346 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F621C44725C5264D00843346 /* Presentation.framework */; };
 		F621C46825C526C400843346 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F621C46725C526C400843346 /* Data.framework */; };
+		F632E64C25C72D9B00749451 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F632E64A25C72D9B00749451 /* LoadingViewController.swift */; };
+		F632E64D25C72D9B00749451 /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F632E64B25C72D9B00749451 /* LoadingViewController.xib */; };
+		F632E65225C72DF600749451 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F632E65125C72DF600749451 /* UIViewControllerExtension.swift */; };
+		F632E65525C72EA200749451 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F632E65425C72EA200749451 /* UIApplicationExtension.swift */; };
+		F632E65825C72FA400749451 /* LoadingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F632E65725C72FA400749451 /* LoadingManager.swift */; };
 		F68037A625C51C3C00E32EBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68037A525C51C3C00E32EBB /* AppDelegate.swift */; };
 		F68037AA25C51C3C00E32EBB /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68037A925C51C3C00E32EBB /* MovieListViewController.swift */; };
 		F68037AD25C51C3C00E32EBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68037AB25C51C3C00E32EBB /* Main.storyboard */; };
@@ -26,6 +31,11 @@
 /* Begin PBXFileReference section */
 		F621C44725C5264D00843346 /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F621C46725C526C400843346 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F632E64A25C72D9B00749451 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		F632E64B25C72D9B00749451 /* LoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
+		F632E65125C72DF600749451 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		F632E65425C72EA200749451 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
+		F632E65725C72FA400749451 /* LoadingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingManager.swift; sourceTree = "<group>"; };
 		F68037A225C51C3C00E32EBB /* MovieDBApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieDBApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68037A525C51C3C00E32EBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F68037A925C51C3C00E32EBB /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +66,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F632E64925C72D7E00749451 /* LoadingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F632E64A25C72D9B00749451 /* LoadingViewController.swift */,
+				F632E64B25C72D9B00749451 /* LoadingViewController.xib */,
+			);
+			path = LoadingViewController;
+			sourceTree = "<group>";
+		};
+		F632E65025C72DC500749451 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F632E65125C72DF600749451 /* UIViewControllerExtension.swift */,
+				F632E65425C72EA200749451 /* UIApplicationExtension.swift */,
+				F632E65725C72FA400749451 /* LoadingManager.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		F680379925C51C3C00E32EBB = {
 			isa = PBXGroup;
 			children = (
@@ -77,10 +106,11 @@
 			isa = PBXGroup;
 			children = (
 				F68037A525C51C3C00E32EBB /* AppDelegate.swift */,
+				F695636D25C5A5B800EE93F2 /* Storyboards */,
 				F6E0525425C58B4B008F0195 /* Scenes */,
 				F6E0524925C587EC008F0195 /* Views */,
+				F632E65025C72DC500749451 /* Extensions */,
 				F69798E525C5356200953AEF /* Resources */,
-				F695636D25C5A5B800EE93F2 /* Storyboards */,
 			);
 			path = MovieDBApp;
 			sourceTree = "<group>";
@@ -142,6 +172,7 @@
 		F6E0524925C587EC008F0195 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F632E64925C72D7E00749451 /* LoadingViewController */,
 				F6E0524A25C587F2008F0195 /* Cells */,
 			);
 			path = Views;
@@ -267,6 +298,7 @@
 				F68037B225C51C4000E32EBB /* LaunchScreen.storyboard in Resources */,
 				F68037AF25C51C4000E32EBB /* Assets.xcassets in Resources */,
 				F68037AD25C51C3C00E32EBB /* Main.storyboard in Resources */,
+				F632E64D25C72D9B00749451 /* LoadingViewController.xib in Resources */,
 				F69798E825C535D500953AEF /* Resources.bundle in Resources */,
 				F6E0525025C58820008F0195 /* MovieCell.xib in Resources */,
 			);
@@ -299,10 +331,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F632E65825C72FA400749451 /* LoadingManager.swift in Sources */,
+				F632E64C25C72D9B00749451 /* LoadingViewController.swift in Sources */,
 				F68037AA25C51C3C00E32EBB /* MovieListViewController.swift in Sources */,
 				F695637225C5A6F700EE93F2 /* MovieDetailViewController.swift in Sources */,
 				F695637725C5AED600EE93F2 /* MovieDetailViewModel.swift in Sources */,
+				F632E65225C72DF600749451 /* UIViewControllerExtension.swift in Sources */,
 				F68037A625C51C3C00E32EBB /* AppDelegate.swift in Sources */,
+				F632E65525C72EA200749451 /* UIApplicationExtension.swift in Sources */,
 				F6E0524F25C58820008F0195 /* MovieCell.swift in Sources */,
 				F6E0525825C58B78008F0195 /* MovieListViewModel.swift in Sources */,
 			);
