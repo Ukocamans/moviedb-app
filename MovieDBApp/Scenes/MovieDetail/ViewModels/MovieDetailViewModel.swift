@@ -7,25 +7,52 @@
 
 import Foundation
 
+import Data
+
 class MovieDetailViewModel {
-    var image: String = ""
-    var voteCount: String = ""
-    var title: String = ""
-    var description: String = ""
+    let imageWidth = 342
     
-    let id: String
+    var image: String?
+    var voteCount: String?
+    var title: String?
+    var description: String?
+    
+    let id: Int
     
     var reloadPage: (()->Void)?
     
     init() {
-        id = ""
+        id = 0
     }
     
-    init(id: String?) {
-        self.id = id ?? ""
+    init(id: Int?, reloadPage: (()->Void)?) {
+        self.reloadPage = reloadPage
+        self.id = id ?? 0
     }
     
     func getMovieDetail() {
+        let request = MovieDetailRequest(id: id)
+        let requestModel = MovieDetailRequestModel()
+        requestModel.apiKey = "fd2b04342048fa2d5f728561866ad52a"
+        requestModel.language = "en-US"
         
+        request.send(reqModel: requestModel) { [weak self] (result) in
+            switch result {
+            case .success(let model):
+                self?.configurePage(with: model)
+                self?.reloadPage?()
+            case .failure(let error):
+                dump(error)
+            case .empty:
+                print("empty")
+            }
+        }
+    }
+    
+    func configurePage(with model: MovieDetailResponseModel?) {
+        image = model?.posterPath
+        title = model?.originalTitle
+        description = model?.overview
+        voteCount = "Total Vote Count: \(model?.voteCount ?? 0)"
     }
 }
