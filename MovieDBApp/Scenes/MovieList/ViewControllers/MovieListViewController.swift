@@ -23,17 +23,11 @@ class MovieListViewController: UIViewController {
         
         viewModel.getPopularMovies()
         
-             let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-            view.addGestureRecognizer(tap)
+        self.hideKeyboardWhenTappedAround()
     }
 
     func setupCollectionView() {
         collectionView.register(MovieCell.self)
-    }
-    
-    @objc func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        view.endEditing(true)
     }
     // MARK: - Navigation
 
