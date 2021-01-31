@@ -13,6 +13,7 @@
                 <outlet property="imageViewBg" destination="Nb6-Fd-ZF6" id="rkv-h8-eZW"/>
                 <outlet property="labelRating" destination="GGL-pg-7J0" id="jEM-OY-oHc"/>
                 <outlet property="labelTitle" destination="fUs-CI-WKo" id="0Qk-Cg-umR"/>
+                <outlet property="viewLike" destination="77l-V8-DeD" id="tJe-Ws-ebY"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -56,12 +57,18 @@
                         <constraint firstAttribute="trailing" secondItem="jyN-hM-mAr" secondAttribute="trailing" id="bM8-OO-xDp"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="77l-V8-DeD" customClass="LikeView" customModule="Presentation">
+                    <rect key="frame" x="128" y="10" width="40" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Nb6-Fd-ZF6" secondAttribute="trailing" id="7E7-Xr-rFo"/>
+                <constraint firstItem="77l-V8-DeD" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="Aix-Co-s4G"/>
                 <constraint firstItem="BPy-dN-0pA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="JFa-4G-o0R"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="77l-V8-DeD" secondAttribute="trailing" constant="10" id="LKA-6M-YdZ"/>
                 <constraint firstItem="BPy-dN-0pA" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Pv6-tW-N5R"/>
                 <constraint firstItem="BPy-dN-0pA" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="dHU-To-gNs"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Nb6-Fd-ZF6" secondAttribute="bottom" id="hbH-2Q-Pb3"/>

@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 import Data
+import Core
 
 public class MovieUIModel {
     
@@ -17,6 +18,11 @@ public class MovieUIModel {
     public var title: String?
     public var rating: String?
     public var id: Int?
+    
+    public var isFavorite: Bool {
+        let id = String(self.id ?? 0)
+        return UserDefaultsManager.shared.getBool(key: id)
+    }
     
     public init(model: MovieModel) {
         id = model.id

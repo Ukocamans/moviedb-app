@@ -13,6 +13,8 @@ public class MovieView: BaseView {
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelRating: UILabel!
     
+    @IBOutlet weak var viewLike: LikeView!
+    
     var dataTask: URLSessionDataTask?
     
     public func prepareForReuse() {
@@ -26,5 +28,6 @@ public class MovieView: BaseView {
         dataTask?.resume()
         labelTitle.text = UIModel.title
         labelRating.text = UIModel.rating
+        viewLike.setup(with: UIModel)
     }
 }

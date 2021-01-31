@@ -15,6 +15,8 @@
 		F65A4FAC25C5827F0072FEE3 /* MovieView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F65A4FA625C582790072FEE3 /* MovieView.xib */; };
 		F65A4FB025C584F00072FEE3 /* MovieUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65A4FAF25C584F00072FEE3 /* MovieUIModel.swift */; };
 		F695635C25C5982C00EE93F2 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F695635B25C5982C00EE93F2 /* UIImageViewExtension.swift */; };
+		F695639025C681D200EE93F2 /* LikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F695638E25C681D200EE93F2 /* LikeView.swift */; };
+		F695639425C681D500EE93F2 /* LikeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F695638F25C681D200EE93F2 /* LikeView.xib */; };
 		F6E0524225C586A2008F0195 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E0524125C586A2008F0195 /* UICollectionViewExtension.swift */; };
 		F6E0524625C586C7008F0195 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E0524525C586C7008F0195 /* ReusableView.swift */; };
 		F6F7FD8325C590EB0017E001 /* UIScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F7FD8225C590EB0017E001 /* UIScreenExtension.swift */; };
@@ -43,6 +45,8 @@
 		F65A4FA625C582790072FEE3 /* MovieView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieView.xib; sourceTree = "<group>"; };
 		F65A4FAF25C584F00072FEE3 /* MovieUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieUIModel.swift; sourceTree = "<group>"; };
 		F695635B25C5982C00EE93F2 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		F695638E25C681D200EE93F2 /* LikeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeView.swift; sourceTree = "<group>"; };
+		F695638F25C681D200EE93F2 /* LikeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LikeView.xib; sourceTree = "<group>"; };
 		F6E0524125C586A2008F0195 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
 		F6E0524525C586C7008F0195 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		F6F7FD8225C590EB0017E001 /* UIScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenExtension.swift; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 		F621C4A425C52E1E00843346 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F695638D25C6819200EE93F2 /* LikeView */,
 				F65A4F9F25C582470072FEE3 /* MovieView */,
 				F621C4A525C52E2400843346 /* Base */,
 			);
@@ -150,6 +155,15 @@
 				F65A4FAF25C584F00072FEE3 /* MovieUIModel.swift */,
 			);
 			path = MovieView;
+			sourceTree = "<group>";
+		};
+		F695638D25C6819200EE93F2 /* LikeView */ = {
+			isa = PBXGroup;
+			children = (
+				F695638E25C681D200EE93F2 /* LikeView.swift */,
+				F695638F25C681D200EE93F2 /* LikeView.xib */,
+			);
+			path = LikeView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F65A4FAC25C5827F0072FEE3 /* MovieView.xib in Resources */,
+				F695639425C681D500EE93F2 /* LikeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F695639025C681D200EE93F2 /* LikeView.swift in Sources */,
 				F6F7FD8325C590EB0017E001 /* UIScreenExtension.swift in Sources */,
 				F65A4FB025C584F00072FEE3 /* MovieUIModel.swift in Sources */,
 				F621C4A125C52DFC00843346 /* UIViewExtension.swift in Sources */,
