@@ -7,6 +7,8 @@
 
 import UIKit
 
+import Presentation
+
 class MovieDetailViewController: UIViewController {
 
     var id: Int?
@@ -14,6 +16,8 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelDescription: UILabel!
     @IBOutlet weak var labelVoteCount: UILabel!
+    
+    var viewLike: LikeView?
     
     var viewModel: MovieDetailViewModel = MovieDetailViewModel()
     
@@ -27,6 +31,13 @@ class MovieDetailViewController: UIViewController {
         })
         
         viewModel.getMovieDetail()
+        configureNavigation()
+    }
+    
+    func configureNavigation() {
+        viewLike = LikeView()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: viewLike ?? UIView())
     }
     
     func configurePage() {
@@ -34,5 +45,6 @@ class MovieDetailViewController: UIViewController {
         labelTitle.text = viewModel.title
         labelDescription.text = viewModel.description
         labelVoteCount.text = viewModel.voteCount
+        viewLike?.setup(with: id ?? 0, and: viewModel.isFavorite)
     }
 }

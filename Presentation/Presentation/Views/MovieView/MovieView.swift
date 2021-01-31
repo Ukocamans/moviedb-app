@@ -19,14 +19,11 @@ public class MovieView: BaseView {
     
     var UIModel: MovieUIModel!
     
-    public override class func awakeFromNib() {
-        NotificationCenter.default.addObserver(self, selector: #selector(favoriteNotification(_:)), name: .favorite, object: nil)
-    }
-    
     public func prepareForReuse() {
         dataTask?.cancel()
         dataTask = nil
         imageViewBg.image = nil
+        NotificationCenter.default.removeObserver(self, name: .favorite, object: nil)
     }
     
     public func setup(with UIModel: MovieUIModel) {
@@ -36,6 +33,7 @@ public class MovieView: BaseView {
         labelTitle.text = UIModel.title
         labelRating.text = UIModel.rating
         viewLike.setup(with: UIModel)
+        NotificationCenter.default.addObserver(self, selector: #selector(favoriteNotification(_:)), name: .favorite, object: nil)
     }
     
     @objc func favoriteNotification(_ notification: Notification) {

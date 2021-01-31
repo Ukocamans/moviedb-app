@@ -8,6 +8,7 @@
 import Foundation
 
 import Data
+import Core
 
 class MovieDetailViewModel {
     let imageWidth = 342
@@ -19,6 +20,11 @@ class MovieDetailViewModel {
     
     let id: Int
     
+    public var isFavorite: Bool {
+        let id = String(self.id)
+        return UserDefaultsManager.shared.getBool(key: id)
+    }
+    
     var reloadPage: (()->Void)?
     
     init() {
@@ -28,6 +34,15 @@ class MovieDetailViewModel {
     init(id: Int?, reloadPage: (()->Void)?) {
         self.reloadPage = reloadPage
         self.id = id ?? 0
+        NotificationCenter.default.addObserver(self, selector: #selector(favoriteNotification(_:)), name: .favorite, object: nil)
+    }
+    
+    @objc func favoriteNotification(_ notification: Notification) {
+        guard let id = notification.userInfo?["id"] as? Int,
+              id == self.id
+        else { return }
+        
+        reloadPage?()
     }
     
     func getMovieDetail() {
@@ -54,5 +69,9 @@ class MovieDetailViewModel {
         title = model?.originalTitle
         description = model?.overview
         voteCount = "Total Vote Count: \(model?.voteCount ?? 0)"
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: .favorite, object: nil)
     }
 }

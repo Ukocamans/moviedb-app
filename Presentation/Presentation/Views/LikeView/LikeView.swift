@@ -15,7 +15,9 @@ public class LikeView: BaseView {
     
     @IBOutlet weak var buttonLike: UIButton!
     
-    var UIModel: MovieUIModel!
+    var UIModel: MovieUIModel?
+    var isFavorite = false
+    var id = 0
     
     public override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,10 +28,17 @@ public class LikeView: BaseView {
         self.UIModel = UIModel
         configureLike()
     }
+    
+    public func setup(with id: Int, and isFavorite: Bool) {
+        buttonLike.setImage(UIImage(named: "favoriteIcon"), for: .normal)
+        self.id = id
+        self.isFavorite = isFavorite
+        configureLike()
+    }
 
     @IBAction func actionLike(_ sender: Any) {
         
-        if UIModel.isFavorite {
+        if UIModel?.isFavorite ?? isFavorite {
             dislikeRequest()
         } else {
             likeRequest()
@@ -39,7 +48,7 @@ public class LikeView: BaseView {
     }
     
     func configureLike() {
-        if UIModel.isFavorite {
+        if UIModel?.isFavorite ?? isFavorite {
             buttonLike.tintColor = .systemPink
         } else {
             buttonLike.tintColor = .lightGray
@@ -47,16 +56,16 @@ public class LikeView: BaseView {
     }
     
     func postNotification() {
-        NotificationCenter.default.post(name: .favorite, object: nil, userInfo: ["id": UIModel.id ?? 0])
+        NotificationCenter.default.post(name: .favorite, object: nil, userInfo: ["id": UIModel?.id ?? id])
     }
     
     func likeRequest() {
-        let id = String(UIModel.id ?? 0)
+        let id = String(UIModel?.id ?? self.id)
         UserDefaultsManager.shared.storeBool(key: id, value: true)
     }
     
     func dislikeRequest() {
-        let id = String(UIModel.id ?? 0)
+        let id = String(UIModel?.id ?? self.id)
         UserDefaultsManager.shared.remove(key: id)
     }
 }

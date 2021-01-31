@@ -28,7 +28,6 @@ public extension UIImageView {
             })
 
         })
-        return nil
     }
     
     func loadMovieImage(path: String?, width: Int?) -> URLSessionDataTask?  {
