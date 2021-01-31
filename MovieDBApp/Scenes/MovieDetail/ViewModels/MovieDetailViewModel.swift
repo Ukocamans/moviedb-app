@@ -47,9 +47,7 @@ class MovieDetailViewModel {
     
     func getMovieDetail() {
         let request = MovieDetailRequest(id: id)
-        let requestModel = MovieDetailRequestModel()
-        requestModel.apiKey = "fd2b04342048fa2d5f728561866ad52a"
-        requestModel.language = "en-US"
+        let requestModel = BaseRequestModel()
         
         request.send(reqModel: requestModel) { [weak self] (result) in
             switch result {

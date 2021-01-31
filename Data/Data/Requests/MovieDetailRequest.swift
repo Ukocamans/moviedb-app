@@ -8,7 +8,7 @@
 import Foundation
 import Core
 
-public class MovieDetailRequest:NetworkRequest<MovieDetailRequestModel,MovieDetailResponseModel> {
+public class MovieDetailRequest:NetworkRequest<BaseRequestModel,MovieDetailResponseModel> {
     public init(id: Int) {
         super.init()
         self.endpoint = "/3/movie/\(id)"
