@@ -33,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Txc-lT-52H">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="152" width="414" height="744"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="X81-rv-zUg">
                                     <size key="itemSize" width="128" height="128"/>
@@ -48,19 +48,34 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Shb-zh-DDR"/>
                                 </connections>
                             </collectionView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Movie by Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z1A-qq-Phk">
+                                <rect key="frame" x="16" y="96" width="382" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="5rD-qJ-Bxc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="jj6-ab-a9S"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Txc-lT-52H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5PT-KQ-uIV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z1A-qq-Phk" secondAttribute="trailing" constant="16" id="6JP-MV-YtU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Txc-lT-52H" secondAttribute="trailing" id="DgS-7C-ffp"/>
+                            <constraint firstItem="Z1A-qq-Phk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Q0o-jj-flX"/>
+                            <constraint firstItem="Z1A-qq-Phk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="TMR-0f-gKE"/>
+                            <constraint firstItem="Txc-lT-52H" firstAttribute="top" secondItem="Z1A-qq-Phk" secondAttribute="bottom" constant="8" id="evw-7g-ogn"/>
                             <constraint firstAttribute="bottom" secondItem="Txc-lT-52H" secondAttribute="bottom" id="iRX-GS-7jl"/>
-                            <constraint firstItem="Txc-lT-52H" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vfm-1e-MZC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2Pi-Gs-Ewc"/>
                     <connections>
                         <outlet property="collectionView" destination="Txc-lT-52H" id="jkL-fu-13d"/>
+                        <outlet property="textFieldSearch" destination="Z1A-qq-Phk" id="WyP-UI-s5A"/>
                         <segue destination="gkl-0q-G72" kind="show" identifier="toDetail" id="DJD-PT-R5E"/>
                     </connections>
                 </viewController>

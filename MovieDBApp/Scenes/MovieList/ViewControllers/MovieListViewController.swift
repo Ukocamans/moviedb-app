@@ -9,6 +9,7 @@ import UIKit
 
 class MovieListViewController: UIViewController {
 
+    @IBOutlet weak var textFieldSearch: UITextField!
     @IBOutlet weak var collectionView: UICollectionView!
     var viewModel = MovieListViewModel()
     
@@ -42,7 +43,11 @@ class MovieListViewController: UIViewController {
         }
     }
     
-
+    @IBAction func textChanged(_ sender: Any) {
+        viewModel.search(text: textFieldSearch.text)
+        viewModel.reloadTable?()
+    }
+    
 }
 
 extension MovieListViewController: UICollectionViewDataSource {

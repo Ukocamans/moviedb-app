@@ -18,6 +18,7 @@ fileprivate struct Constants {
 class MovieListViewModel {
     
     var dataSource: [MovieUIModel] = []
+    var allDataSource: [MovieUIModel] = []
     var isBusy = false
     var page = 0
     
@@ -39,6 +40,23 @@ class MovieListViewModel {
     
     var reloadTable: (()-> Void)?
     
+    func search(text: String?) {
+        if text == nil || text == "" {
+            isBusy = false
+            dataSource = allDataSource
+        } else {
+            isBusy = true
+            dataSource = allDataSource.filter({ (model) -> Bool in
+                guard let loweredText = text?.lowercased(),
+                      let title = model.title?.lowercased() else { return false }
+                return title.starts(with: loweredText)
+            })
+            dataSource.sort { (model1, model2) -> Bool in
+                model1.title ?? "" < model2.title ?? ""
+            }
+        }
+    }
+    
     func getPopularMovies() {
         let request = PopularMoviesRequest()
         let requestModel = PopularMoviesRequestModel()
@@ -49,7 +67,8 @@ class MovieListViewModel {
         request.send(reqModel: requestModel) { [weak self] (result) in
             switch result {
             case .success(let model):
-                self?.dataSource += self?.createDataSource(movies: model.results ?? []) ?? []
+                self?.allDataSource += self?.createDataSource(movies: model.results ?? []) ?? []
+                self?.search(text: nil)
                 self?.reloadTable?()
             case .failure(let error):
                 dump(error)
