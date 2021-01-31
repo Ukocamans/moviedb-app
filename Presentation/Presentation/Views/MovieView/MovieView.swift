@@ -17,6 +17,12 @@ public class MovieView: BaseView {
     
     var dataTask: URLSessionDataTask?
     
+    var UIModel: MovieUIModel!
+    
+    public override class func awakeFromNib() {
+        NotificationCenter.default.addObserver(self, selector: #selector(favoriteNotification(_:)), name: .favorite, object: nil)
+    }
+    
     public func prepareForReuse() {
         dataTask?.cancel()
         dataTask = nil
@@ -24,10 +30,19 @@ public class MovieView: BaseView {
     }
     
     public func setup(with UIModel: MovieUIModel) {
+        self.UIModel = UIModel
         dataTask = imageViewBg.loadMovieImage(path: UIModel.image, width: UIModel.width)
         dataTask?.resume()
         labelTitle.text = UIModel.title
         labelRating.text = UIModel.rating
+        viewLike.setup(with: UIModel)
+    }
+    
+    @objc func favoriteNotification(_ notification: Notification) {
+        guard let id = notification.userInfo?["id"] as? Int,
+              id == UIModel.id
+        else { return }
+        
         viewLike.setup(with: UIModel)
     }
 }

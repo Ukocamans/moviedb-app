@@ -47,7 +47,7 @@ public class LikeView: BaseView {
     }
     
     func postNotification() {
-        NotificationCenter.default.post(name: .favorite, object: nil, userInfo: nil)
+        NotificationCenter.default.post(name: .favorite, object: nil, userInfo: ["id": UIModel.id ?? 0])
     }
     
     func likeRequest() {

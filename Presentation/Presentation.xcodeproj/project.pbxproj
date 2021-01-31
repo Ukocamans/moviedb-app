@@ -17,6 +17,7 @@
 		F695635C25C5982C00EE93F2 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F695635B25C5982C00EE93F2 /* UIImageViewExtension.swift */; };
 		F695639025C681D200EE93F2 /* LikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F695638E25C681D200EE93F2 /* LikeView.swift */; };
 		F695639425C681D500EE93F2 /* LikeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F695638F25C681D200EE93F2 /* LikeView.xib */; };
+		F69563A225C6934300EE93F2 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69563A125C6934300EE93F2 /* Data.framework */; };
 		F6E0524225C586A2008F0195 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E0524125C586A2008F0195 /* UICollectionViewExtension.swift */; };
 		F6E0524625C586C7008F0195 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E0524525C586C7008F0195 /* ReusableView.swift */; };
 		F6F7FD8325C590EB0017E001 /* UIScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F7FD8225C590EB0017E001 /* UIScreenExtension.swift */; };
@@ -47,6 +48,7 @@
 		F695635B25C5982C00EE93F2 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		F695638E25C681D200EE93F2 /* LikeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeView.swift; sourceTree = "<group>"; };
 		F695638F25C681D200EE93F2 /* LikeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LikeView.xib; sourceTree = "<group>"; };
+		F69563A125C6934300EE93F2 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E0524125C586A2008F0195 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
 		F6E0524525C586C7008F0195 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		F6F7FD8225C590EB0017E001 /* UIScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenExtension.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F69563A225C6934300EE93F2 /* Data.framework in Frameworks */,
 				F621C44B25C5265400843346 /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +107,7 @@
 		F621C44925C5265300843346 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F69563A125C6934300EE93F2 /* Data.framework */,
 				F621C44A25C5265400843346 /* Core.framework */,
 			);
 			name = Frameworks;
@@ -437,6 +441,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Presentation/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -444,6 +449,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = tr.com.ukocaman.Presentation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -462,6 +468,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Presentation/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -469,6 +476,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = tr.com.ukocaman.Presentation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -482,6 +490,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
@@ -498,6 +507,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;

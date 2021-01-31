@@ -25,7 +25,6 @@ class MovieListViewModel {
     
     init(reloadTable: (()-> Void)?) {
         self.reloadTable = reloadTable
-        NotificationCenter.default.addObserver(self, selector: #selector(favoriteNotification(_:)), name: .favorite, object: nil)
     }
     
     var numberOfItems: Int {
@@ -39,10 +38,6 @@ class MovieListViewModel {
     }
     
     var reloadTable: (()-> Void)?
-    
-    @objc func favoriteNotification(_ notification: Notification) {
-        reloadTable?()
-    }
     
     func getPopularMovies() {
         let request = PopularMoviesRequest()
